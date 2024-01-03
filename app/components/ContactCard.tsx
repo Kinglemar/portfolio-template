@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import ReactMapboxGl, { Layer, Feature, Marker, Popup } from "react-mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
+import Location from '@/app/components/Icons/Location'
 
 const ContactCard: React.FunctionComponent = () => {
   const Map = ReactMapboxGl({
@@ -19,9 +20,13 @@ const ContactCard: React.FunctionComponent = () => {
             style="mapbox://styles/mapbox/streets-v9"
             className={"w-100 md:h-[85vh] h-[45vh]"}
           >
-            <Marker coordinates={[-0.2416815, 51.5285582]}>
-                <img height={24} width={24} src="/public/img/arrow-up-outline.svg" alt="" />
-              </Marker>
+            <Marker
+              offsetLeft={-20}
+              offsetTop={-10}
+              coordinates={[-0.2416815, 51.5285582]}
+            >
+             <Location/>
+            </Marker>
             {/* <Marker
               latitude={-122.4194}
               longitude={37.7749}
