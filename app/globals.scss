@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  font-family: var(--font-poppins);
+}
+
+body {
+  overflow-x: hidden;
+  transition: all 450ms ease-in;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-unbounded);
+  margin-bottom: 0;
+}
+.paragraph {
+  font-family: var(--font-poppins);
+}
+
+.nav-links {
+  font-family: var(--font-unbounded);
+  text-transform: uppercase;
+  font-weight: 600;
+  border-bottom: none;
+  margin-bottom: 0;
+}
+.nav-links::after {
+  content: none;
+}
+::-webkit-scrollbar {
+  width: 5px;
+  height: 2px;
+  background-color: #aaa;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--scroll);
+  border-radius: 10px;
+}
+
+.lime-yellow {
+  background: #e3ff05;
+}
+
+a {
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid #000;
+  cursor: pointer;
+  transition: transform 1s ease;
+}
+
+a::after {
+  content: "\2197";
+  margin-left: 0.4rem;
+  height: 10px;
+}
+a::hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.mapboxgl-control-container {
+  display: none !important;
+}
+
+@mixin white-gradient {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+$animationSpeed: 40s;
+
+// Animation
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+
+// Styling
+.slider {
+  background: #fff;
+  height: 200px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  &::before,
+  &::after {
+    @include white-gradient;
+    content: "";
+    height: 100px;
+    position: absolute;
+    width: 200px;
+    z-index: 2;
+  }
+
+  &::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+  }
+
+  &::before {
+    left: 0;
+    top: 0;
+  }
+
+  .slide-track {
+    animation: scroll $animationSpeed linear infinite;
+    display: flex;
+    width: calc(250px * 14);
+  }
+
+  .slide {
+    height: 100px;
+    width: 250px;
+  }
+}
