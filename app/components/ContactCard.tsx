@@ -14,22 +14,22 @@ const ContactCard: React.FunctionComponent = () => {
       <div className="md:flex w-full justify-between">
         <div className="md:w-5/12 mt-[-10rem]">
           <Map
-            center={[-122.4194, 37.7749]}
+            center={[-0.2416815, 51.5285582]}
             zoom={[16]}
             style="mapbox://styles/mapbox/streets-v9"
             className={"w-100 md:h-[85vh] h-[45vh]"}
           >
-            {/* <Marker coordinates={[-0.2416815, 51.5285582]}>
+            <Marker coordinates={[-0.2416815, 51.5285582]}>
                 <img height={24} width={24} src="/public/img/arrow-up-outline.svg" alt="" />
-              </Marker> */}
-            <Marker
+              </Marker>
+            {/* <Marker
               latitude={-122.4194}
               longitude={37.7749}
               offsetLeft={-20}
               offsetTop={-10}
             >
               <div className="p-3 bg-black text-white">Marker</div>
-            </Marker>
+            </Marker> */}
           </Map>
         </div>
         <div className="md:w-5/12 mx-auto">
