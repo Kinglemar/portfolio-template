@@ -21,6 +21,12 @@ function Footer() {
           </Link>
           <Link
             className="uppercase mb-0 text-xs font-bold after:content-[none] border-b-0"
+            href={"/projects"}
+          >
+            Projects
+          </Link>
+          <Link
+            className="uppercase mb-0 text-xs font-bold after:content-[none] border-b-0"
             href={"/contact"}
           >
             contact
