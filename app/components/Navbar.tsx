@@ -1,13 +1,19 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-// import { MobileMenu } from "./MobileMenu";
+import { useRouter } from "next/navigation";
+import MobileMenu from "./MobileMenu";
 
 const Navbar: React.FunctionComponent = () => {
   const [modalState, toggleModal] = useState<boolean>(false);
+  const router = useRouter();
 
   return (
-    <section className="bg-white py-5 w-full fixed top-0 z-[100]">
+    <section
+      className={` ${
+        modalState ? "backdrop-blur-sm bg-black/20" : "bg-white"
+      } py-5 w-full fixed top-0 z-[100]`}
+    >
       <div className="md:w-11/12 w-11/12 mx-auto flex justify-between items-center">
         <Link className="mb-0 border-b-0 after:content-[none]" href={"/"}>
           <h1 className="text-xl font-bold ">Paragon</h1>
@@ -55,7 +61,7 @@ const Navbar: React.FunctionComponent = () => {
         </button>
       </div>
 
-      {/* <MobileMenu displayed={modalState} onClick={() => toggleModal(false)} /> */}
+      <MobileMenu displayed={modalState} onClick={() => toggleModal(false)} />
     </section>
   );
 };

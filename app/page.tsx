@@ -35,15 +35,15 @@ export default function Home() {
 
   return (
     <main className="m-0 min-h-[70vh]">
-      <section className="mt-14 lg:w-10/12 md:mx-auto md:w-11/12 w-11/12">
-        <div className="mb-3 font-bold lg:w-10/12 mx-auto">
-          <h1 className="md:text-8xl md:leading-[7.2rem] text-5xl leading-[4.8rem] text-end">
+      <section className="mt-14 lg:w-10/12 md:mx-auto md:w-11/12 w-11/12 mx-auto">
+        <div className="mb-3 font-bold lg:w-10/12 mx-auto px-2">
+          <h1 className="md:text-8xl md:leading-[7.2rem] text-4xl leading-[4.8rem] text-end">
             Creating The
           </h1>
-          <h1 className="md:text-8xl md:leading-[7.2rem] text-5xl leading-[4.8rem] text-start">
+          <h1 className="md:text-8xl md:leading-[7.2rem] text-4xl leading-[4.8rem] text-start">
             Best Digital
           </h1>
-          <h1 className="md:text-8xl md:leading-[7.2rem] text-5xl leading-[4.8rem] text-end">
+          <h1 className="md:text-8xl md:leading-[7.2rem] text-4xl leading-[4.8rem] text-end">
             Solution
           </h1>
         </div>
@@ -51,7 +51,7 @@ export default function Home() {
         <div className="flex md:gap-16 gap-6 md:items-end items-center justify-end md:w-9/12 w-11/12 md:ml-auto mx-auto relative md:mt-[-3rem] mt-8">
           <Link
             href={"/projects"}
-            className="animate-bounce hover:animate-none transition ease-in-out delay-150 rounded-full bg-[#e3ff05] lg:p-6 lg:py-12 md:p-8 sm:p-3 sm:py-8 p-6 relative after:content-[none] border-none"
+            className="animate-bounce hover:animate-none transition ease-in-out delay-150 rounded-full bg-[#e3ff05] lg:p-7 lg:py-12 md:p-8 sm:p-3 sm:py-8 p-6 relative after:content-[none] border-none"
           >
             <p className="uppercase text-xs font-bold text-center">
               View Our works
@@ -66,7 +66,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative w-full lg:h-[75vh] md:h-[60vh] sm:h-[50vh] h-[23vh] mt-16 ">
+      <section className="relative w-full lg:h-[75vh] md:h-[60vh] sm:h-[50vh] h-[35vh] mt-16 ">
         <Image
           alt={"Collaborate"}
           fill
